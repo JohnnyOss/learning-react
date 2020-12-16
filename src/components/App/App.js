@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './App.scss';
 import List from '../List/List.js';
 import Creator from '../Creator/Creator.js';
@@ -7,6 +8,10 @@ import {pageContents, listData, settings} from '../../data/dataStore';
 class App extends React.Component {
   state = {
     lists: this.props.lists || [],
+  }
+
+  static propTypes = {
+    lists: PropTypes.array,
   }
 
   static defaultProps = {
@@ -24,8 +29,8 @@ class App extends React.Component {
             title,
             image: this.props.lists[0].image,
             columns: [],
-          }
-        ]
+          },
+        ],
       }
     ));
   }
@@ -42,7 +47,7 @@ class App extends React.Component {
           <Creator text={settings.listCreatorText} action={title => this.addList(title)}/>
         </div>
       </main>  
-    )
+    );
   }
 }
 
