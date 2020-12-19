@@ -4,6 +4,7 @@ import styles from './App.scss';
 import List from '../List/ListContainer.js';
 //import Creator from '../Creator/Creator.js';
 import {listData /*settings*/} from '../../data/dataStore';
+import Search from '../Search/SearchContainer.js';
 
 class App extends React.Component {
   state = {
@@ -43,6 +44,7 @@ class App extends React.Component {
       <main className={styles.component}>
         <h1 className={styles.title}>{title}</h1>
         <h2 className={styles.subtitle}>{subtitle}</h2>
+        < Search />
         {lists.map(listData => (
           <List key={listData.id} {...listData} />
         ))}
