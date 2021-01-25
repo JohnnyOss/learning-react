@@ -92,6 +92,18 @@ const lists = [
     description: 'Interesting things I want to check out!',
     image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
   },
+  {
+    id: 'list-2',
+    title: 'Things to do <sup>Very soon!</sup>',
+    description: 'Things I need to do!',
+    image: 'https://wallpaperaccess.com/full/1783294.jpg',
+  },
+  {
+    id: 'list-3',
+    title: 'Things I did',
+    description: 'Interesting things that I have already done',
+    image: 'https://cdn.wallpapersafari.com/86/89/4rH5ox.jpg',
+  },
 ];
 
 const columns = [

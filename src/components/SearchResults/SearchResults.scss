@@ -1,0 +1,12 @@
+@import '../../styles/settings.scss';
+
+.component {
+  width: calc(33% - 12px);
+  background: $color-light;
+  margin: 0 auto;
+  padding: ($base-size * 1.5);
+  border-radius: $radius;
+  box-shadow: 0 ($base-size / 4) 0 rgba(0,0,0,0.3);
+  color: $color-dark;
+  text-align: center;
+}

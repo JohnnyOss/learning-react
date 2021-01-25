@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Home.scss';
-import List from '../List/ListContainer.js';
+import ListLink from '../ListLink/ListLink';
 //import Creator from '../Creator/Creator.js';
 import {listData /*settings*/} from '../../data/dataStore';
-import Search from '../Search/SearchContainer.js';
 
 class Home extends React.Component {
   state = {
@@ -44,9 +43,8 @@ class Home extends React.Component {
       <main className={styles.component}>
         <h1 className={styles.title}>{title}</h1>
         <h2 className={styles.subtitle}>{subtitle}</h2>
-        < Search />
         {lists.map(listData => (
-          <List key={listData.id} {...listData} />
+          <ListLink key={listData.id} {...listData} />
         ))}
         {/*<div className={styles.creator}>
           <Creator text={settings.listCreatorText} action={title => this.addList(title)}/>
